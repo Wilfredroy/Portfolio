@@ -1,0 +1,263 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+  }
+  
+  h1, h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #bbb;
+    max-width: 700px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .section-heading {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    opacity: 0;
+    white-space: nowrap;
+    border-right: 2px solid #fff;
+    padding-right: 5px;
+  }
+  
+  .section-heading.reveal {
+    opacity: 1;
+    border-right: none;
+  }
+  
+  /* Typing Effect */
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  /* Intro Section */
+  #intro {
+    background: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    transform: scale(1.05);
+    transition: transform 0.6s ease-out;
+  }
+  
+  #intro:hover {
+    transform: scale(1.1);
+  }
+  
+  #intro .intro-content {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  #intro h1 {
+    font-size: 4rem;
+  }
+  
+  #intro p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position:sticky;
+    padding-left: 30%;
+  }
+  
+  #intro .btn {
+    padding: 15px 30px;
+    background-color: #01b0e3;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  #intro .btn:hover {
+    background-color: #0095a9;
+    transform: scale(1.1);
+  }
+  
+  /* Fading Animation on Scroll */
+  @keyframes fadeInSection {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .section-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .project-list, .certifications-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .project-card, .certification-card {
+    background-color: #333;
+    width: 250px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .project-card:hover, .certification-card:hover {
+    transform: translateY(-15px) rotateY(5deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  }
+  
+  .project-card h3, .certification-card h3 {
+    font-size: 1.8rem;
+  }
+  
+  .project-card p, .certification-card p {
+    color: #bbb;
+  }
+  
+  /* Contact Section Styles */
+  #contact form {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  #contact input, #contact textarea {
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  #contact button {
+    padding: 15px;
+    background-color: #01b0e3;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #contact button:hover {
+    background-color: #0276a3;
+    transform: scale(1.05);
+  }
+  
+  /* Footer & Social Links */
+  footer {
+    background-color: #121212;
+    color: #bbb;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .social-links {
+    margin-bottom: 20px;
+  }
+  
+  .social-link {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: #01b0e3;
+  }
+  
+  footer p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Animations */
+  @keyframes typing {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+  /* Small Screen Adjustments */
+  @media (max-width: 768px) {
+    #intro h1 {
+      font-size: 3rem;
+    }
+  
+    #intro p {
+      font-size: 1.2rem;
+    }
+  
+    .project-card, .certification-card {
+      width: 100%;
+      padding: 20px;
+    }
+  }
+  
